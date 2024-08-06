@@ -1,13 +1,14 @@
-const template = require('./template');
 const puppeteer = require('puppeteer');
-const url = require('url');
+const path = require('path');
 
 exports.generateImage = async function (req, res) {
   try {
     const queryObject = url.parse(req.query.url, true).query;
     const { title, content, imageUrl } = queryObject;
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      executablePath: path.resolve(__dirname, 'path/to/chrome')
+    });
     const page = await browser.newPage();
 
     await page.setViewport({ width: 1200, height: 630 });
