@@ -8,7 +8,7 @@ const puppeteer = require('./puppeteer');
 
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: '*',
   optionsSuccessStatus: 200,
 };
 

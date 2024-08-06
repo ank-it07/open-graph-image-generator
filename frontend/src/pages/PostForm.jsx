@@ -12,7 +12,7 @@ const PostForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/og-image`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}og-image`, {
         params: { url },
         responseType: 'blob'
       });
