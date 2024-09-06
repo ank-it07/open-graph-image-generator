@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: ankit059/og-img-server:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: FRONTEND_URL_1
+          value: "http://frontend:5173"
