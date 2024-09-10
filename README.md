@@ -1,4 +1,4 @@
-# opengraph-image-generator
+
 # OpenGraph Image Generator
 
 OpenGraph Image Generator is a web tool that allows users to generate dynamic images optimized for OpenGraph meta tags. It uses React for the front-end, integrates `react-helmet-async` for SEO meta tag management, and enables users to customize their OpenGraph images by uploading photos and adding relevant content such as titles and descriptions.
